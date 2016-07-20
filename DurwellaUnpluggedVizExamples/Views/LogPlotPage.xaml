@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="DurwellaUnpluggedVizExamples.LogPlotPage"
+		Title= "Log Plot"
+		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz" >
+	<ContentPage.Content>
+		<unplugged:XYPlotView x:Name="plotView" 
+				VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+				x:TypeArguments="x:Single"
+				Data="{Binding Data}"
+				ColorMapRange="{Binding ColorMapRange}" >
+		</unplugged:XYPlotView>
+	</ContentPage.Content>
+</ContentPage>

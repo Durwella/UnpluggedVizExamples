@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="DurwellaUnpluggedVizExamples.MoonPage"
+		Title="Moon Elevation"
+		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz"		>
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Name="Information" Icon="info.png" Command="{Binding InfoCommand}"/> 
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand">
+			<unplugged:ColorMappedImageView x:Name="image"
+					VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+					Data="{Binding Data}" ColorMap="{Binding ColorMap}" >
+			</unplugged:ColorMappedImageView>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Color Map" VerticalOptions="Center"></Label>
+				<Picker SelectedIndex="{Binding ColorMapIndex}" HorizontalOptions="FillAndExpand" >
+					<Picker.Items>
+						<x:String>Black and White</x:String>
+						<x:String>Red, White, and Blue</x:String>
+						<x:String>Halloween</x:String>
+						<x:String>Christmas</x:String>
+						<x:String>Rainbow</x:String>
+					</Picker.Items>
+				</Picker>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

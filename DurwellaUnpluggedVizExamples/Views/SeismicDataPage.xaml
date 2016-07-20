@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="DurwellaUnpluggedVizExamples.SeismicDataPage"
+		Title="Seismic Data"
+		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz"
+		>
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Name="Information" Icon="info.png" Command="{Binding InfoCommand}"/> 
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand">
+			<unplugged:ColorMappedImageView x:Name="image"
+					VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+					Data="{Binding Data}" ColorMapMaximum="1" ColorMap="{Binding ColorMap}" >
+			</unplugged:ColorMappedImageView>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Time slice"></Label>
+				<Slider Value="{Binding SliceIndex}" Maximum="16" HorizontalOptions="FillAndExpand"></Slider>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
