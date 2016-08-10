@@ -2,10 +2,11 @@
 using System.IO;
 using System.Reflection;
 using Durwella.Unplugged.Viz;
+using Xamarin.Forms;
 
 namespace DurwellaUnpluggedVizExamples
 {
-	public class LogPlotPageViewModel : BindableBase
+	public class LogPlotPageViewModel : BindableObject
 	{
 		public LogPlotPageViewModel()
 		{
@@ -16,14 +17,14 @@ namespace DurwellaUnpluggedVizExamples
 		public float[] Data
 		{
 			get { return _data; }
-			private set { _data = value; NotifyPropertyChanged("Data"); }
+			private set { _data = value; OnPropertyChanged("Data"); }
 		}
 
 		RangeF _colorMapRange;
 		public RangeF ColorMapRange
 		{
 			get { return _colorMapRange; }
-			private set { _colorMapRange = value; NotifyPropertyChanged("ColorMapRange"); }
+			private set { _colorMapRange = value; OnPropertyChanged("ColorMapRange"); }
 		}
 
 		void LoadData()

@@ -2,7 +2,7 @@
 
 namespace DurwellaUnpluggedVizExamples
 {
-	public class MainPageViewModel : BindableBase
+	public class MainPageViewModel : BindableObject
 	{
 		INavigation _navigation;
 
@@ -42,7 +42,7 @@ namespace DurwellaUnpluggedVizExamples
 						break;
 				}
 
-				NotifyPropertyChanged("SelectedSample");
+				OnPropertyChanged("SelectedSample");
 			}
 		}
 	}

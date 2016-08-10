@@ -30,14 +30,14 @@ namespace DurwellaUnpluggedVizExamples
 		public RawDataArray Data
 		{
 			get { return _data; }
-			set { _data = value; NotifyPropertyChanged("Data"); }
+			set { _data = value; OnPropertyChanged("Data"); }
 		}
 
 		Color[] _colorMap = { Color.Black, Color.White };
 		public Color[] ColorMap
 		{
 			get { return _colorMap; }
-			set { _colorMap = value; NotifyPropertyChanged("ColorMap"); }
+			set { _colorMap = value; OnPropertyChanged("ColorMap"); }
 		}
 
 		int _colorMapIndex = 0;

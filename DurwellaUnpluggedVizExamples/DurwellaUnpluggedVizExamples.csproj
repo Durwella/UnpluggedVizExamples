@@ -81,7 +81,6 @@
       <DependentUpon>SeismicDataPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\SeismicDataPageViewModel.cs" />
-    <Compile Include="BindableBase.cs" />
     <Compile Include="Views\DistributionPage.xaml.cs">
       <DependentUpon>DistributionPage.xaml</DependentUpon>
     </Compile>

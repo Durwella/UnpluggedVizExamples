@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="DurwellaUnpluggedVizExamples.MoonPage"
 		Title="Moon Elevation"
-		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz"		>
+		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz">
 	<ContentPage.ToolbarItems>
         <ToolbarItem Name="Information" Icon="info.png" Command="{Binding InfoCommand}"/> 
 	</ContentPage.ToolbarItems>

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
 using Durwella.Unplugged.Viz;
+using Xamarin.Forms;
 
 namespace DurwellaUnpluggedVizExamples
 {
-	public class DistributionPageViewModel : BindableBase
+	public class DistributionPageViewModel : BindableObject
 	{
 		XYPlotView<float> _plotView;
 
@@ -20,7 +21,7 @@ namespace DurwellaUnpluggedVizExamples
 		public float[] Data
 		{
 			get { return _data; }
-			private set { _data = value; NotifyPropertyChanged("Data"); }
+			private set { _data = value; OnPropertyChanged("Data"); }
 		}
 
 		float _mean = 0;

@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace DurwellaUnpluggedVizExamples
 {
-	public class SampleViewModelBase : BindableBase
+	public class SampleViewModelBase : BindableObject
 	{
 		string _information;
 		public string Information

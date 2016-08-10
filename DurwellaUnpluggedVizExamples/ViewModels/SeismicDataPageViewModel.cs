@@ -25,7 +25,7 @@ namespace DurwellaUnpluggedVizExamples
 		public RawDataArray Data
 		{
 			get { return _data; }
-			private set { _data = value; NotifyPropertyChanged("Data"); }
+			private set { _data = value; OnPropertyChanged("Data"); }
 		}
 
 		int _sliceIndex = 0;
