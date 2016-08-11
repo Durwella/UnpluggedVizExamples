@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="DurwellaUnpluggedVizExamples.Well3DPage"
+		Title="3D Well"
+		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz"
+		xmlns:local="clr-namespace:DurwellaUnpluggedVizExamples;assembly=DurwellaUnpluggedVizExamples"
+		x:Name="root">
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Name="Information" Icon="info.png" Command="{Binding InfoCommand}"/> 
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<RelativeLayout>
+			<unplugged:TumbleView x:Name="tumbleView"
+				BackgroundColor="#33CCFF"
+				Models="{Binding Models}"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1}"
+				>
+				<unplugged:TumbleView.CameraControl>
+					<unplugged:CameraControl
+						BindingContext="{x:Reference Name=root}"
+						CameraPosition="{Binding BindingContext.CameraPosition}"
+						Translation="{Binding BindingContext.Translation}"
+						ZoomScale="{Binding BindingContext.ZoomScale}"
+						>
+					</unplugged:CameraControl>
+				</unplugged:TumbleView.CameraControl>
+			</unplugged:TumbleView>
+			<Slider
+				RelativeLayout.WidthConstraint=
+					"{ConstraintExpression 	Type=RelativeToParent,
+											Property=Width,
+											Factor=0.9}"
+				RelativeLayout.YConstraint=
+					"{ConstraintExpression 	Type=RelativeToParent,
+											Property=Y,
+											Factor=1.0,
+											Constant=10}"
+				RelativeLayout.XConstraint=
+					"{ConstraintExpression 	Type=RelativeToParent,
+											Property=Width,
+											Factor=0.05,
+											Constant=10}"
+				Value="{Binding MeasuredDepth}" Maximum="18333" HorizontalOptions="FillAndExpand"></Slider>
+			<StackLayout
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5, Constant=-6}"
+				Spacing="0"
+				>
+				<local:NumericEntry Text="MD: " Value="{Binding MeasuredDepth}" Units="ft."></local:NumericEntry>
+				<local:NumericEntry Text="TVD: " Value="{Binding TrueVerticalDepth}" Units="ft."></local:NumericEntry>
+				<local:NumericEntry Text="N: " Value="{Binding North}" Units="ft."></local:NumericEntry>
+				<local:NumericEntry Text="E: " Value="{Binding East}" Units="ft."></local:NumericEntry>
+			</StackLayout>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

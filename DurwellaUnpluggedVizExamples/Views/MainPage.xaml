@@ -45,7 +45,7 @@
 						RelativeLayout.XConstraint="0"
 						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=textBox, Property=Height, Factor=1.0, Constant=16}"
 						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
-						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0, Constant=64}"
+						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=2.0, Constant=128}"
 						ItemsSource="{Binding Samples}" SelectedItem="{Binding SelectedSample, Mode=TwoWay}"
 					>
 				</local:GridMenu>

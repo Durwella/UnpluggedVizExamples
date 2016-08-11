@@ -119,14 +119,8 @@
       <HintPath>..\packages\MonoGame.Framework.iOS.3.5.1.1679\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Durwella.Unplugged.Viz.iOS">
-      <HintPath>..\packages\Durwella.Unplugged.Viz.1.0.1\lib\xamarinios10\Durwella.Unplugged.Viz.iOS.dll</HintPath>
+      <HintPath>..\packages\Durwella.Unplugged.Viz.1.1.0\lib\xamarinios10\Durwella.Unplugged.Viz.iOS.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DurwellaUnpluggedVizExamples\DurwellaUnpluggedVizExamples.csproj">
-      <Project>{070FCEA2-2E09-4BC3-81BD-1F8B7801E021}</Project>
-      <Name>DurwellaUnpluggedVizExamples</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
@@ -150,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Resources\body\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -173,6 +168,77 @@
     <BundleResource Include="Resources\moonicon.png" />
     <BundleResource Include="Resources\distributionicon.png" />
     <BundleResource Include="Resources\seismicicon.png" />
+    <BundleResource Include="Resources\sand.png" />
+    <BundleResource Include="Ground.fsh" />
+    <BundleResource Include="Ground.vsh" />
+    <BundleResource Include="Indicator.vsh" />
+    <BundleResource Include="Indicator.fsh" />
+    <BundleResource Include="Resources\metal.jpg" />
+    <BundleResource Include="Resources\metal-dark.jpg" />
+    <BundleResource Include="HeightMapModel.fsh" />
+    <BundleResource Include="HeightMapModel.vsh" />
+    <BundleResource Include="Seismic3DModel.fsh" />
+    <BundleResource Include="Seismic3DModel.vsh" />
+    <BundleResource Include="SeismicWellModel.fsh" />
+    <BundleResource Include="SeismicWellModel.vsh" />
+    <BundleResource Include="Resources\bodyicon.png" />
+    <BundleResource Include="Resources\seismic3dicon.png" />
+    <BundleResource Include="Resources\well3dicon.png" />
+    <BundleResource Include="Resources\body\body0.png" />
+    <BundleResource Include="Resources\body\body3.png" />
+    <BundleResource Include="Resources\body\body6.png" />
+    <BundleResource Include="Resources\body\body9.png" />
+    <BundleResource Include="Resources\body\body12.png" />
+    <BundleResource Include="Resources\body\body15.png" />
+    <BundleResource Include="Resources\body\body18.png" />
+    <BundleResource Include="Resources\body\body21.png" />
+    <BundleResource Include="Resources\body\body24.png" />
+    <BundleResource Include="Resources\body\body27.png" />
+    <BundleResource Include="Resources\body\body30.png" />
+    <BundleResource Include="Resources\body\body33.png" />
+    <BundleResource Include="Resources\body\body36.png" />
+    <BundleResource Include="Resources\body\body39.png" />
+    <BundleResource Include="Resources\body\body42.png" />
+    <BundleResource Include="Resources\body\body45.png" />
+    <BundleResource Include="Resources\body\body48.png" />
+    <BundleResource Include="Resources\body\body51.png" />
+    <BundleResource Include="Resources\body\body54.png" />
+    <BundleResource Include="Resources\body\body57.png" />
+    <BundleResource Include="Resources\body\body60.png" />
+    <BundleResource Include="Resources\body\body63.png" />
+    <BundleResource Include="Resources\body\body66.png" />
+    <BundleResource Include="Resources\body\body69.png" />
+    <BundleResource Include="Resources\body\body72.png" />
+    <BundleResource Include="Resources\body\body75.png" />
+    <BundleResource Include="Resources\body\body78.png" />
+    <BundleResource Include="Resources\body\body81.png" />
+    <BundleResource Include="Resources\body\body84.png" />
+    <BundleResource Include="Resources\body\body87.png" />
+    <BundleResource Include="Resources\body\body90.png" />
+    <BundleResource Include="Resources\body\body93.png" />
+    <BundleResource Include="Resources\body\body96.png" />
+    <BundleResource Include="Resources\body\body99.png" />
+    <BundleResource Include="Resources\body\body102.png" />
+    <BundleResource Include="Resources\body\body105.png" />
+    <BundleResource Include="Resources\body\body108.png" />
+    <BundleResource Include="Resources\body\body111.png" />
+    <BundleResource Include="Resources\body\body114.png" />
+    <BundleResource Include="Resources\body\body117.png" />
+    <BundleResource Include="Resources\body\body120.png" />
+    <BundleResource Include="Resources\body\body123.png" />
+    <BundleResource Include="Resources\body\body126.png" />
+    <BundleResource Include="Resources\body\body129.png" />
+    <BundleResource Include="Resources\body\body132.png" />
+    <BundleResource Include="Resources\body\body135.png" />
+    <BundleResource Include="Resources\body\body138.png" />
+    <BundleResource Include="Resources\body\body141.png" />
+    <BundleResource Include="Resources\body\body144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DurwellaUnpluggedVizExamples\DurwellaUnpluggedVizExamples.csproj">
+      <Project>{070FCEA2-2E09-4BC3-81BD-1F8B7801E021}</Project>
+      <Name>DurwellaUnpluggedVizExamples</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.2.0.31\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.2.0.31\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

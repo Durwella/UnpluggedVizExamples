@@ -68,6 +68,17 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\license" />
+    <EmbeddedResource Include="Views\Well3DPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Seismic3DPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\3DHorizons.xyz" />
+    <EmbeddedResource Include="Resources\seismicdata" />
+    <EmbeddedResource Include="Views\BodyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -100,6 +111,30 @@
     </Compile>
     <Compile Include="Components\GridMenu.cs" />
     <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Views\Well3DPage.xaml.cs">
+      <DependentUpon>Well3DPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Well3DPageViewModel.cs" />
+    <Compile Include="Models\GroundModel.cs" />
+    <Compile Include="Models\WellModel.cs" />
+    <Compile Include="Models\CasingModel.cs" />
+    <Compile Include="Models\WellboreObject.cs" />
+    <Compile Include="Models\DrillPipeModel.cs" />
+    <Compile Include="Models\DepthIndicatorModel.cs" />
+    <Compile Include="Components\NumericEntry.cs" />
+    <Compile Include="Views\Seismic3DPage.xaml.cs">
+      <DependentUpon>Seismic3DPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Seismic3DPageViewModel.cs" />
+    <Compile Include="Models\Seismic3DModel.cs" />
+    <Compile Include="Models\HeightMapModel.cs" />
+    <Compile Include="Models\SeismicWellModel.cs" />
+    <Compile Include="Models\Seismic3DModelBase.cs" />
+    <Compile Include="Views\BodyPage.xaml.cs">
+      <DependentUpon>BodyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BodySliceModel.cs" />
+    <Compile Include="ViewModels\BodyPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExifLib">
@@ -117,8 +152,11 @@
     <Reference Include="Rg.Plugins.Popup">
       <HintPath>..\packages\Rg.Plugins.Popup.0.0.17\lib\portable-win+net45+wp8+win8+wpa81\Rg.Plugins.Popup.dll</HintPath>
     </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\lib\MonoGame.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="Durwella.Unplugged.Viz">
-      <HintPath>..\packages\Durwella.Unplugged.Viz.1.0.1\lib\portable-net45+win+wp80+MonoTouch10+MonoAndroid10+xamarinmac20+xamarintvos10+xamarinwatchos10+xamarinios10\Durwella.Unplugged.Viz.dll</HintPath>
+      <HintPath>..\packages\Durwella.Unplugged.Viz.1.1.0\lib\portable-net45+win+wp80+MonoTouch10+MonoAndroid10+xamarinmac20+xamarintvos10+xamarinwatchos10+xamarinios10\Durwella.Unplugged.Viz.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

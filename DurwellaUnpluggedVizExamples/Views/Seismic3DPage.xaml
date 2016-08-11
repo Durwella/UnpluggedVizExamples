@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="DurwellaUnpluggedVizExamples.Seismic3DPage"
+		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz"
+		Title="Seismic3D"
+		x:Name="root">
+	<ContentPage.ToolbarItems>
+        <ToolbarItem Name="Information" Icon="info.png" Command="{Binding InfoCommand}"/> 
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<RelativeLayout>
+			<unplugged:TumbleView x:Name="tumbleView"
+						VerticalOptions="FillAndExpand"
+						Models="{Binding Models}" BackgroundColor="#33CCFF"
+						RelativeLayout.WidthConstraint=
+								"{ConstraintExpression 	Type=RelativeToParent,
+														Property=Width,
+														Factor=1,
+														Constant=0}"
+						RelativeLayout.HeightConstraint=
+								"{ConstraintExpression 	Type=RelativeToParent,
+														Property=Height,
+														Factor=1,
+														Constant=0}"
+					>
+				<unplugged:TumbleView.CameraControl>
+					<unplugged:CameraControl
+						BindingContext="{x:Reference Name=root}"
+						Translation="{Binding BindingContext.Translation}"
+						CameraPosition="{Binding BindingContext.CameraPosition}">
+					</unplugged:CameraControl>
+				</unplugged:TumbleView.CameraControl>
+			</unplugged:TumbleView>
+
+			<Slider
+					RelativeLayout.WidthConstraint=
+						"{ConstraintExpression 	Type=RelativeToParent,
+												Property=Width,
+												Factor=0.9}"
+					RelativeLayout.YConstraint=
+						"{ConstraintExpression 	Type=RelativeToParent,
+												Property=Y,
+												Factor=1.0,
+												Constant=10}"
+					RelativeLayout.XConstraint=
+						"{ConstraintExpression 	Type=RelativeToParent,
+												Property=Width,
+												Factor=0.05,
+												Constant=10}"
+					Maximum="{Binding MaximumInlineValue}"
+					Value="{Binding Inline, Mode=TwoWay}"
+				>
+				</Slider>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>
