@@ -156,7 +156,7 @@
       <HintPath>..\lib\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Durwella.Unplugged.Viz">
-      <HintPath>..\packages\Durwella.Unplugged.Viz.1.1.0\lib\portable-net45+win+wp80+MonoTouch10+MonoAndroid10+xamarinmac20+xamarintvos10+xamarinwatchos10+xamarinios10\Durwella.Unplugged.Viz.dll</HintPath>
+      <HintPath>..\packages\Durwella.Unplugged.Viz.1.2.0\lib\portable-net45+win+wp80+MonoTouch10+MonoAndroid10+xamarinmac20+xamarintvos10+xamarinwatchos10+xamarinios10\Durwella.Unplugged.Viz.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

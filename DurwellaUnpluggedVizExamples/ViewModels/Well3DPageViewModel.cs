@@ -22,7 +22,7 @@ namespace DurwellaUnpluggedVizExamples
 
 		public ObservableCollection<IGeometry> Models { get; private set; }
 
-		public Vector3 CameraPosition { get; } = new Vector3(0, 0.1f, -1);
+		public Vector3 CameraPosition { get; } = new Vector3(0, 0.1f, 1);
 
 		Vector3 _translation = Vector3.Zero;
 		public Vector3 Translation
