@@ -15,9 +15,9 @@ namespace DurwellaUnpluggedVizExamples
 			BindableProperty.Create("Units", typeof(string), typeof(NumericEntry), "",
 									propertyChanged: (b, oldVal, newVal) => (b as NumericEntry).Units = (string)newVal);
 
-		Label _text = new Label { FontSize = 12 };
-		Label _value = new Label { FontSize = 12 };
-		Label _units = new Label { FontSize = 12 };
+		Label _text = new Label { FontSize = 12, TextColor = Color.Black };
+		Label _value = new Label { FontSize = 12, TextColor = Color.Black };
+		Label _units = new Label { FontSize = 12, TextColor = Color.Black };
 		public NumericEntry()
 		{
 			ColumnDefinitions = new ColumnDefinitionCollection {

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Reflection;
 using Durwella.Unplugged.Viz;
+using Xamarin.Forms;
 
 namespace DurwellaUnpluggedVizExamples
 {
 	[FragmentShader(CommonFragmentShader.ColorMapping)]
-	[FragmentShader("Seismic3DModel.fsh")]
-	[VertexShader("Seismic3DModel.vsh")]
+	[FragmentShader("Seismic3DModel.fsh", isResource: true)]
+	[VertexShader("Seismic3DModel.vsh", isResource: true)]
 	[DrawWith(PrimitiveType.TriangleStrip, BackFaces.NotCulled)]
 	public class Seismic3DModel : Seismic3DModelBase, ITranslatableGeometry
 	{

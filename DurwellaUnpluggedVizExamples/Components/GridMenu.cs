@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 
@@ -120,7 +118,7 @@ namespace DurwellaUnpluggedVizExamples
 
 				var index = _itemsSource.Count();
 				if (value != null)
-				{	
+				{
 					index = _itemsSource.TakeWhile(i => !i.Equals(value)).Count();
 				}
 

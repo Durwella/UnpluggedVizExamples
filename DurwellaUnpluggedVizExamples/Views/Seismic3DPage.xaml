@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="DurwellaUnpluggedVizExamples.Seismic3DPage"
 		xmlns:unplugged="clr-namespace:Durwella.Unplugged.Viz;assembly=Durwella.Unplugged.Viz"
-		Title="Seismic3D"
+		Title="3D Seismic Data"
 		x:Name="root">
 	<ContentPage.ToolbarItems>
         <ToolbarItem Name="Information" Icon="info.png" Command="{Binding InfoCommand}"/> 

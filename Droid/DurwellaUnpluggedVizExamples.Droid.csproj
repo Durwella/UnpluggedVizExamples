@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED8A6AAF-9819-4E4E-8067-49DDB7847AFA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DurwellaUnpluggedVizExamples.Droid</RootNamespace>
+    <AssemblyName>DurwellaUnpluggedVizExamples.Droid</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidTlsProvider></AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <AndroidLinkSkip></AndroidLinkSkip>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidSupportedAbis>armeabi-v7a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.3.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.180\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\MonoGame.Framework.Android.3.5.1.1679\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Durwella.Unplugged.Viz.Droid">
+      <HintPath>..\packages\Durwella.Unplugged.Viz.1.3.0\lib\monoandroid10\Durwella.Unplugged.Viz.Droid.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ImageLoader.cs" />
+    <Compile Include="SplashScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\bodyicon.png" />
+    <AndroidResource Include="Resources\drawable\distributionicon.png" />
+    <AndroidResource Include="Resources\drawable\info.png" />
+    <AndroidResource Include="Resources\drawable\logploticon.png" />
+    <AndroidResource Include="Resources\drawable\metal.jpg" />
+    <AndroidResource Include="Resources\drawable\metal_dark.jpg" />
+    <AndroidResource Include="Resources\drawable\moonicon.png" />
+    <AndroidResource Include="Resources\drawable\seismic3dicon.png" />
+    <AndroidResource Include="Resources\drawable\seismicicon.png" />
+    <AndroidResource Include="Resources\drawable\well3dicon.png" />
+    <AndroidResource Include="Resources\drawable\body0.png" />
+    <AndroidResource Include="Resources\drawable\body102.png" />
+    <AndroidResource Include="Resources\drawable\body105.png" />
+    <AndroidResource Include="Resources\drawable\body108.png" />
+    <AndroidResource Include="Resources\drawable\body111.png" />
+    <AndroidResource Include="Resources\drawable\body114.png" />
+    <AndroidResource Include="Resources\drawable\body117.png" />
+    <AndroidResource Include="Resources\drawable\body12.png" />
+    <AndroidResource Include="Resources\drawable\body120.png" />
+    <AndroidResource Include="Resources\drawable\body123.png" />
+    <AndroidResource Include="Resources\drawable\body126.png" />
+    <AndroidResource Include="Resources\drawable\body129.png" />
+    <AndroidResource Include="Resources\drawable\body132.png" />
+    <AndroidResource Include="Resources\drawable\body135.png" />
+    <AndroidResource Include="Resources\drawable\body138.png" />
+    <AndroidResource Include="Resources\drawable\body141.png" />
+    <AndroidResource Include="Resources\drawable\body144.png" />
+    <AndroidResource Include="Resources\drawable\body15.png" />
+    <AndroidResource Include="Resources\drawable\body18.png" />
+    <AndroidResource Include="Resources\drawable\body21.png" />
+    <AndroidResource Include="Resources\drawable\body24.png" />
+    <AndroidResource Include="Resources\drawable\body27.png" />
+    <AndroidResource Include="Resources\drawable\body3.png" />
+    <AndroidResource Include="Resources\drawable\body30.png" />
+    <AndroidResource Include="Resources\drawable\body33.png" />
+    <AndroidResource Include="Resources\drawable\body36.png" />
+    <AndroidResource Include="Resources\drawable\body39.png" />
+    <AndroidResource Include="Resources\drawable\body42.png" />
+    <AndroidResource Include="Resources\drawable\body45.png" />
+    <AndroidResource Include="Resources\drawable\body48.png" />
+    <AndroidResource Include="Resources\drawable\body51.png" />
+    <AndroidResource Include="Resources\drawable\body54.png" />
+    <AndroidResource Include="Resources\drawable\body57.png" />
+    <AndroidResource Include="Resources\drawable\body6.png" />
+    <AndroidResource Include="Resources\drawable\body60.png" />
+    <AndroidResource Include="Resources\drawable\body63.png" />
+    <AndroidResource Include="Resources\drawable\body66.png" />
+    <AndroidResource Include="Resources\drawable\body69.png" />
+    <AndroidResource Include="Resources\drawable\body72.png" />
+    <AndroidResource Include="Resources\drawable\body75.png" />
+    <AndroidResource Include="Resources\drawable\body78.png" />
+    <AndroidResource Include="Resources\drawable\body81.png" />
+    <AndroidResource Include="Resources\drawable\body84.png" />
+    <AndroidResource Include="Resources\drawable\body87.png" />
+    <AndroidResource Include="Resources\drawable\body9.png" />
+    <AndroidResource Include="Resources\drawable\body90.png" />
+    <AndroidResource Include="Resources\drawable\body93.png" />
+    <AndroidResource Include="Resources\drawable\body96.png" />
+    <AndroidResource Include="Resources\drawable\body99.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\sand.png" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\splashLogo.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\SplashScreen.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\splashLogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splashLogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splashLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\mipmap-hdpi\" />
+    <Folder Include="Resources\mipmap-mdpi\" />
+    <Folder Include="Resources\mipmap-xhdpi\" />
+    <Folder Include="Resources\mipmap-xxhdpi\" />
+    <Folder Include="Resources\mipmap-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DurwellaUnpluggedVizExamples\DurwellaUnpluggedVizExamples.csproj">
+      <Project>{070FCEA2-2E09-4BC3-81BD-1F8B7801E021}</Project>
+      <Name>DurwellaUnpluggedVizExamples</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ground.fsh" />
+    <EmbeddedResource Include="Ground.vsh" />
+    <EmbeddedResource Include="HeightMapModel.fsh" />
+    <EmbeddedResource Include="HeightMapModel.vsh" />
+    <EmbeddedResource Include="Indicator.fsh" />
+    <EmbeddedResource Include="Indicator.vsh" />
+    <EmbeddedResource Include="Seismic3DModel.fsh" />
+    <EmbeddedResource Include="Seismic3DModel.vsh" />
+    <EmbeddedResource Include="SeismicWellModel.fsh" />
+    <EmbeddedResource Include="SeismicWellModel.vsh" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

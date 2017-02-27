@@ -1,5 +1,4 @@
 ﻿using System.Windows.Input;
-using Rg.Plugins.Popup.Extensions;
 using Xamarin.Forms;
 
 namespace DurwellaUnpluggedVizExamples
@@ -27,7 +26,7 @@ namespace DurwellaUnpluggedVizExamples
 		{
 			return new Command(async () =>
 			{
-				await Application.Current.MainPage.Navigation.PushPopupAsync(new InfoPopup(text));
+				await Application.Current.MainPage.DisplayAlert("Information", text, "Dismiss");
 			});
 		}
 	}

@@ -1,5 +1,6 @@
 ﻿using System;
 using Durwella.Unplugged.Viz;
+using Xamarin.Forms;
 
 namespace DurwellaUnpluggedVizExamples
 {
@@ -10,6 +11,8 @@ namespace DurwellaUnpluggedVizExamples
 	{
 		int _index;
 		bool _isVisible = true;
+		readonly object _texture;
+		readonly byte[,,] _emptyImage = { { { 0, 0, 0, 0 } } };
 		public BodySliceModel(int index)
 		{
 			_index = index;
@@ -32,7 +35,11 @@ namespace DurwellaUnpluggedVizExamples
 				{1, 0}
 			};
 
-			Image = $"body/body{index}.png";
+			if (Device.OS == TargetPlatform.iOS)
+				Image = $"body/body{index}.png";
+			else
+				// We load the byte array ourselves to have more control and avoid memory issues on Android
+				Image = _texture = DependencyService.Get<IImageLoader>().LoadImageFromResource($"body{index}", 2);
 		}
 
 		public void SetVisibility(int sliceIndex)
@@ -40,14 +47,18 @@ namespace DurwellaUnpluggedVizExamples
 			if (_index >= sliceIndex && !_isVisible)
 			{
 				_isVisible = true;
-				Image = $"body/body{_index}.png";
+
+				if (Device.OS == TargetPlatform.iOS)
+					Image = $"body/body{_index}.png";
+				else
+					Image = _texture;
 			}
 			else if (_index < sliceIndex && _isVisible)
 			{
 				_isVisible = false;
 
 				// Set the slice fully transparent
-				Image = new byte[,,] { { { 0, 0, 0, 0 } } };
+				Image = _emptyImage;
 			}
 		}
 	}

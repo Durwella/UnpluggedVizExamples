@@ -17,7 +17,7 @@ namespace DurwellaUnpluggedVizExamples
 				new GroundModel(),
 			};
 
-			Information = "An example illustration of a 3D model of a directional wellbore.  The well trajectory is calculated from specified survey data.  Relative diameters of sections of the wellbore represent different casing outer diameters; the darker cylinders at bottom represent drillpipe extending beyond the cashing shoe.";
+			Information = "An example illustration of a 3D model of a directional wellbore.  The well trajectory is calculated from specified survey data.  Relative diameters of sections of the wellbore represent different casing outer diameters; the darker cylinders at bottom represent drillpipe extending beyond the casing shoe.";
 		}
 
 		public ObservableCollection<IGeometry> Models { get; private set; }

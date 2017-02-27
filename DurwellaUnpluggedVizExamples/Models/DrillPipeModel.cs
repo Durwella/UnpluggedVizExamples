@@ -6,7 +6,7 @@ namespace DurwellaUnpluggedVizExamples
 	{
 		public DrillPipeModel(float radius, Vector3 from, Vector3 to) : base(radius, from, to)
 		{
-			Image = "metal-dark.jpg";
+			Image = "metal_dark.jpg";
 		}
 	}
 }

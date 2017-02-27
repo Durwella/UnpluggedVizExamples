@@ -8,8 +8,8 @@ namespace DurwellaUnpluggedVizExamples
 {
 	[DrawWith(PrimitiveType.TriangleStrip, BackFaces.NotCulled)]
 	[FragmentShader(CommonFragmentShader.ColorMapping)]
-	[FragmentShader("HeightMapModel.fsh")]
-	[VertexShader("HeightMapModel.vsh")]
+	[FragmentShader("HeightMapModel.fsh", isResource: true)]
+	[VertexShader("HeightMapModel.vsh", isResource: true)]
 	// Order of attributes matters... 
 	public class HeightMapModel : Seismic3DModelBase
 	{
